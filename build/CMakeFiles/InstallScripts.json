@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ltq/code/opengl/opengl-ltq/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

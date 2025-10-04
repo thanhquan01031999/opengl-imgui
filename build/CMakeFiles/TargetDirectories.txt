@@ -1,0 +1,3 @@
+/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles/hello_window.dir
+/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles/edit_cache.dir
+/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles/rebuild_cache.dir

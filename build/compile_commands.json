@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ltq/code/opengl/opengl-ltq/build",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -g -o CMakeFiles/hello_window.dir/src/main.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/main.cpp",
+  "file": "/home/ltq/code/opengl/opengl-ltq/src/main.cpp",
+  "output": "CMakeFiles/hello_window.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/ltq/code/opengl/opengl-ltq/build",
+  "command": "/usr/bin/gcc  -I/home/ltq/code/opengl/opengl-ltq/dependencies -g -o CMakeFiles/hello_window.dir/src/glad.c.o -c /home/ltq/code/opengl/opengl-ltq/src/glad.c",
+  "file": "/home/ltq/code/opengl/opengl-ltq/src/glad.c",
+  "output": "CMakeFiles/hello_window.dir/src/glad.c.o"
+}
+]
