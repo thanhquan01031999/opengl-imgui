@@ -1,0 +1,42 @@
+# --- CMake ---
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# --- Binaries ---
+*.out
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.a
+*.lib
+
+# --- IDEs ---
+# CLion / JetBrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs / Misc ---
+*.log
+
+# --- ImGui / GLAD (if vendored submodules) ---
+# Uncomment if using as submodules and want to ignore changes
+# imgui/
+# glad/
+
+# --- Backup files ---
+*~
+*.swp
