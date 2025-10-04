@@ -63,34 +63,92 @@ CMAKE_BINARY_DIR = /home/ltq/code/opengl/opengl-ltq/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/imgui.dir/all
 all: CMakeFiles/hello_window.dir/all
+all: dependencies/fmt/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/imgui.dir/codegen
 codegen: CMakeFiles/hello_window.dir/codegen
+codegen: dependencies/fmt/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: dependencies/fmt/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/imgui.dir/clean
 clean: CMakeFiles/hello_window.dir/clean
+clean: dependencies/fmt/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory dependencies/fmt
+
+# Recursive "all" directory target.
+dependencies/fmt/all: dependencies/fmt/CMakeFiles/fmt.dir/all
+.PHONY : dependencies/fmt/all
+
+# Recursive "codegen" directory target.
+dependencies/fmt/codegen: dependencies/fmt/CMakeFiles/fmt.dir/codegen
+.PHONY : dependencies/fmt/codegen
+
+# Recursive "preinstall" directory target.
+dependencies/fmt/preinstall:
+.PHONY : dependencies/fmt/preinstall
+
+# Recursive "clean" directory target.
+dependencies/fmt/clean: dependencies/fmt/CMakeFiles/fmt.dir/clean
+.PHONY : dependencies/fmt/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/imgui.dir
+
+# All Build rule for target.
+CMakeFiles/imgui.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=10,11,12,13,14 "Built target imgui"
+.PHONY : CMakeFiles/imgui.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/imgui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imgui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 0
+.PHONY : CMakeFiles/imgui.dir/rule
+
+# Convenience name for target.
+imgui: CMakeFiles/imgui.dir/rule
+.PHONY : imgui
+
+# codegen rule for target.
+CMakeFiles/imgui.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=10,11,12,13,14 "Finished codegen for target imgui"
+.PHONY : CMakeFiles/imgui.dir/codegen
+
+# clean rule for target.
+CMakeFiles/imgui.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/clean
+.PHONY : CMakeFiles/imgui.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hello_window.dir
 
 # All Build rule for target.
-CMakeFiles/hello_window.dir/all:
+CMakeFiles/hello_window.dir/all: CMakeFiles/imgui.dir/all
+CMakeFiles/hello_window.dir/all: dependencies/fmt/CMakeFiles/fmt.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=1,2,3 "Built target hello_window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target hello_window"
 .PHONY : CMakeFiles/hello_window.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hello_window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello_window.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 0
 .PHONY : CMakeFiles/hello_window.dir/rule
@@ -102,13 +160,45 @@ hello_window: CMakeFiles/hello_window.dir/rule
 # codegen rule for target.
 CMakeFiles/hello_window.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target hello_window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=4,5,6,7,8,9 "Finished codegen for target hello_window"
 .PHONY : CMakeFiles/hello_window.dir/codegen
 
 # clean rule for target.
 CMakeFiles/hello_window.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/clean
 .PHONY : CMakeFiles/hello_window.dir/clean
+
+#=============================================================================
+# Target rules for target dependencies/fmt/CMakeFiles/fmt.dir
+
+# All Build rule for target.
+dependencies/fmt/CMakeFiles/fmt.dir/all:
+	$(MAKE) $(MAKESILENT) -f dependencies/fmt/CMakeFiles/fmt.dir/build.make dependencies/fmt/CMakeFiles/fmt.dir/depend
+	$(MAKE) $(MAKESILENT) -f dependencies/fmt/CMakeFiles/fmt.dir/build.make dependencies/fmt/CMakeFiles/fmt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=1,2,3 "Built target fmt"
+.PHONY : dependencies/fmt/CMakeFiles/fmt.dir/all
+
+# Build rule for subdir invocation for target.
+dependencies/fmt/CMakeFiles/fmt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dependencies/fmt/CMakeFiles/fmt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ltq/code/opengl/opengl-ltq/build/CMakeFiles 0
+.PHONY : dependencies/fmt/CMakeFiles/fmt.dir/rule
+
+# Convenience name for target.
+fmt: dependencies/fmt/CMakeFiles/fmt.dir/rule
+.PHONY : fmt
+
+# codegen rule for target.
+dependencies/fmt/CMakeFiles/fmt.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f dependencies/fmt/CMakeFiles/fmt.dir/build.make dependencies/fmt/CMakeFiles/fmt.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target fmt"
+.PHONY : dependencies/fmt/CMakeFiles/fmt.dir/codegen
+
+# clean rule for target.
+dependencies/fmt/CMakeFiles/fmt.dir/clean:
+	$(MAKE) $(MAKESILENT) -f dependencies/fmt/CMakeFiles/fmt.dir/build.make dependencies/fmt/CMakeFiles/fmt.dir/clean
+.PHONY : dependencies/fmt/CMakeFiles/fmt.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

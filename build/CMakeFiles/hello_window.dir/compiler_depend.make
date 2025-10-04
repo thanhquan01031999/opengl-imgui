@@ -67,6 +67,106 @@ CMakeFiles/hello_window.dir/src/glad.c.o: /home/ltq/code/opengl/opengl-ltq/src/g
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h
 
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/font_cousine_regular.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fontawesome5_icons.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fontawesome_regular.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fonts.hpp \
+  /usr/include/assert.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/GLFW/glfw3.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/KHR/khrplatform.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/glfw.h \
+  /usr/include/GL/gl.h \
+  /usr/include/GL/glext.h \
+  /usr/include/assert.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/KHR/khrplatform.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/glad/glad.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h \
+  /usr/include/assert.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
 CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/main.cpp \
   /home/ltq/code/opengl/opengl-ltq/dependencies/GLFW/glfw3.h \
   /home/ltq/code/opengl/opengl-ltq/dependencies/KHR/khrplatform.h \
@@ -211,6 +311,10 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
   /home/ltq/code/opengl/opengl-ltq/dependencies/glm/vec2.hpp \
   /home/ltq/code/opengl/opengl-ltq/dependencies/glm/vec3.hpp \
   /home/ltq/code/opengl/opengl-ltq/dependencies/glm/vec4.hpp \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
+  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/glfw.h \
+  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -337,6 +441,8 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -437,11 +543,7 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
@@ -469,8 +571,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -483,37 +583,37 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double2_precision.hpp:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/usr/include/c++/13/bits/locale_facets.tcc:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool3_precision.hpp:
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/usr/include/c++/13/bits/basic_ios.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x3.hpp:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool2_precision.hpp:
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x2_precision.hpp:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec4.inl:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/include/c++/13/bits/locale_classes.tcc:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/usr/include/c++/13/cmath:
+/usr/include/wchar.h:
+
+/usr/include/sched.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec3.hpp:
 
 /usr/include/c++/13/ext/alloc_traits.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x2.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/scalar_int_sized.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/compute_vector_relational.hpp:
 
@@ -522,8 +622,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 /usr/include/c++/13/ext/atomicity.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat3x4.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat3x2.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat2x3.hpp:
 
@@ -537,25 +635,15 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/geometric.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_geometric.inl:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x4.hpp:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/exponential.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/vector_relational.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x4.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double4_precision.hpp:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec1.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_exponential.inl:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/_vectorize.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x2.inl:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/common.hpp:
 
@@ -563,25 +651,19 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/debug/assertions.h:
 
-/usr/include/c++/13/clocale:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/c++/13/string_view:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x4.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double3.hpp:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x2.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x4.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_geometric.inl:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double4x4.hpp:
 
 /usr/include/alloca.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double4x3_precision.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double4x3.hpp:
 
@@ -593,11 +675,11 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double3x4_precision.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x3.inl:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x3_precision.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x4.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
@@ -609,9 +691,109 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/tr1/legendre_function.tcc:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double3_precision.hpp:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x3.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/13/clocale:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x4.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec3.inl:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double3x2_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x4.inl:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/pthread.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x3.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x4_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x2.inl:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x3.inl:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec2.inl:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x2.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x2.inl:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/_vectorize.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat4x2.hpp:
+
+/usr/include/c++/13/bits/utility.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/c++/13/new:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_matrix.inl:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
+
+/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat3x2.hpp:
+
+/usr/include/c++/13/typeinfo:
+
+/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp:
+
+/usr/include/wctype.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/scalar_uint_sized.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double3x3.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x4.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/dlfcn.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x4_precision.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/home/ltq/code/opengl/opengl-ltq/src/main.cpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x3_precision.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/stdc-predef.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x2_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x3.inl:
+
+/usr/include/GL/gl.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x3.hpp:
 
@@ -621,65 +803,7 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/cstdio:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double3x3.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x2.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/trigonometric.hpp:
-
-/usr/include/dlfcn.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x4_precision.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat4x2.hpp:
-
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/c++/13/new:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/c++/13/tr1/beta_function.tcc:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x3_precision.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool4.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/stdc-predef.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x2_precision.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/qualifier.hpp:
-
-/usr/include/c++/13/streambuf:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_matrix.inl:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x2_precision.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x3.inl:
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fontawesome_regular.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x3.hpp:
 
@@ -689,6 +813,10 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double4x3_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fontawesome5_icons.h:
+
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec1.inl:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
@@ -697,15 +825,15 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/strings.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/_fixes.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec2.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/scalar_int_sized.hpp:
+
 /usr/include/c++/13/bits/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x4_precision.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x2.inl:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x3.inl:
 
 /usr/include/features.h:
 
@@ -719,6 +847,14 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glad/glad.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x3_precision.hpp:
+
+/usr/include/c++/13/bits/move.h:
+
+/usr/include/c++/13/bits/char_traits.h:
+
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -727,17 +863,25 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/c++/13/bits/stl_construct.h:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x2.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x2.hpp:
+/usr/include/c++/13/cassert:
 
-/usr/include/c++/13/bits/charconv.h:
+/usr/include/c++/13/ext/numeric_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
+/usr/include/c++/13/climits:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/c++/13/iosfwd:
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/13/bits/ios_base.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x3_precision.hpp:
 
@@ -751,13 +895,7 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double3x2_precision.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x4.inl:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/pthread.h:
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/font_cousine_regular.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -771,11 +909,15 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
 /home/ltq/code/opengl/opengl-ltq/src/glad.c:
 
+/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h:
+
+/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -789,17 +931,9 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/bits/refwrap.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec2.inl:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x2.hpp:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double4x4_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double4.hpp:
-
-/usr/include/c++/13/tr1/special_function_util.h:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x4.hpp:
 
@@ -808,6 +942,12 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_uint4.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/KHR/khrplatform.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool2_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -825,17 +965,15 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/bits/std_abs.h:
 
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x3.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/c++/13/system_error:
+
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/matrix.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/string.h:
-
-/usr/include/c++/13/bits/exception_ptr.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -843,53 +981,91 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x4.inl:
 
-/usr/include/sched.h:
-
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_vector_relational.inl:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/asm-generic/errno-base.h:
 
-/home/ltq/code/opengl/opengl-ltq/src/main.cpp:
+/usr/include/endian.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool2.hpp:
+/usr/include/assert.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/usr/include/c++/13/cwctype:
+
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/fonts.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/iosfwd:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x3.inl:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_float2_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat2x2.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/GLFW/glfw3.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x3.hpp:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec4.inl:
 
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
+/usr/include/c++/13/bits/locale_classes.tcc:
 
-/usr/include/c++/13/system_error:
+/usr/include/c++/13/cmath:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat3x3.hpp:
+/usr/include/c++/13/bits/stl_construct.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x2.hpp:
+
+/usr/include/c++/13/bits/charconv.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_double2x2_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/trigonometric.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x2.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x2_precision.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/qualifier.hpp:
+
+/usr/include/c++/13/streambuf:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool2.hpp:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool3_precision.hpp:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool4.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_uint3.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_bool4_precision.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float4x4.hpp:
+/usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double2_precision.hpp:
 
-/usr/include/c++/13/bits/ios_base.h:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double3.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat4x2.hpp:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double3_precision.hpp:
 
-/usr/include/c++/13/cassert:
+/usr/include/c++/13/tr1/special_function_util.h:
 
-/usr/include/c++/13/ext/numeric_traits.h:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double4.hpp:
 
-/usr/include/c++/13/climits:
+/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_double4_precision.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/compute_common.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_float2.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_float2_precision.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/mat2x2.hpp:
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/vector_float3.hpp:
 
@@ -969,19 +1145,7 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/vec4.hpp:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/scalar_uint_sized.hpp:
-
-/usr/include/wctype.h:
-
 /usr/include/asm-generic/errno.h:
-
-/usr/include/endian.h:
-
-/usr/include/assert.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/c++/13/cwctype:
 
 /usr/include/time.h:
 
@@ -996,8 +1160,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 /usr/include/c++/13/bits/uses_allocator.h:
 
 /usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
@@ -1029,8 +1191,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/bits/locale_facets.h:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
 /usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/c++/13/bits/string_view.tcc:
@@ -1041,12 +1201,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float2x3_precision.hpp:
-
-/usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/c++/13/bits/move.h:
-
 /usr/include/c++/13/bits/new_allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
@@ -1054,6 +1208,8 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/c++/13/bits/stl_function.h:
+
+/home/ltq/code/opengl/opengl-ltq/include/imgui_impl/glfw.h:
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
@@ -1105,6 +1261,8 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/cstdlib:
 
+/usr/include/GL/glext.h:
+
 /usr/include/c++/13/debug/debug.h:
 
 /usr/include/c++/13/exception:
@@ -1135,8 +1293,6 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
 
-/usr/include/c++/13/typeinfo:
-
 /usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/ctype.h:
@@ -1150,27 +1306,3 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: /home/ltq/code/opengl/opengl-ltq/src
 /home/ltq/code/opengl/opengl-ltq/dependencies/glm/ext/matrix_float3x3.hpp:
 
 /usr/include/locale.h:
-
-/usr/include/wchar.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec3.inl:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_mat2x4.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_vec2.hpp:
-
-/home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/_fixes.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:

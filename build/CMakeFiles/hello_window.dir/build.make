@@ -100,22 +100,72 @@ CMakeFiles/hello_window.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hello_window.dir/src/glad.c.s"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ltq/code/opengl/opengl-ltq/src/glad.c -o CMakeFiles/hello_window.dir/src/glad.c.s
 
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o: CMakeFiles/hello_window.dir/flags.make
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o: CMakeFiles/hello_window.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o -MF CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o.d -o CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp
+
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp > CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.i
+
+CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp -o CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.s
+
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o: CMakeFiles/hello_window.dir/flags.make
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o: CMakeFiles/hello_window.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o -MF CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o.d -o CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp
+
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp > CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.i
+
+CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp -o CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.s
+
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o: CMakeFiles/hello_window.dir/flags.make
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o: /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o: CMakeFiles/hello_window.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o -MF CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o.d -o CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp
+
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp > CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.i
+
+CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp -o CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.s
+
 # Object files for target hello_window
 hello_window_OBJECTS = \
 "CMakeFiles/hello_window.dir/src/main.cpp.o" \
-"CMakeFiles/hello_window.dir/src/glad.c.o"
+"CMakeFiles/hello_window.dir/src/glad.c.o" \
+"CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o" \
+"CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o" \
+"CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o"
 
 # External object files for target hello_window
 hello_window_EXTERNAL_OBJECTS =
 
 hello_window: CMakeFiles/hello_window.dir/src/main.cpp.o
 hello_window: CMakeFiles/hello_window.dir/src/glad.c.o
+hello_window: CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o
+hello_window: CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o
+hello_window: CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o
 hello_window: CMakeFiles/hello_window.dir/build.make
 hello_window: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
+hello_window: libimgui.a
+hello_window: dependencies/fmt/libfmtd.a
 hello_window: /usr/lib/x86_64-linux-gnu/libGLX.so
 hello_window: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 hello_window: CMakeFiles/hello_window.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hello_window"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ltq/code/opengl/opengl-ltq/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable hello_window"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_window.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

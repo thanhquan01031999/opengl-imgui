@@ -325,4 +325,9 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/glfw.h \
+ /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h

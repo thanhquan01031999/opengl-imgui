@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ltq/code/opengl/opengl-ltq/src/glad.c" "CMakeFiles/hello_window.dir/src/glad.c.o" "gcc" "CMakeFiles/hello_window.dir/src/glad.c.o.d"
+  "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp" "CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o" "gcc" "CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o.d"
+  "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp" "CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o" "gcc" "CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o.d"
+  "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp" "CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o" "gcc" "CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o.d"
   "/home/ltq/code/opengl/opengl-ltq/src/main.cpp" "CMakeFiles/hello_window.dir/src/main.cpp.o" "gcc" "CMakeFiles/hello_window.dir/src/main.cpp.o.d"
   )
 

@@ -11,14 +11,21 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.1.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeSystem.cmake"
+  "/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/CMakeLists.txt"
+  "/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/support/cmake/JoinPaths.cmake"
+  "/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/support/cmake/cxx14.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeCInformation.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeCXXInformation.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeGenericSystem.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/CheckCXXCompilerFlag.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/CheckCXXSourceCompiles.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/CheckSymbolExists.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Compiler/GNU-C.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Compiler/GNU-CXX.cmake"
@@ -26,9 +33,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/cmake/1487/share/cmake-4.1/Modules/FindOpenGL.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/FindPackageMessage.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/GNUInstallDirs.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CheckCompilerFlag.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CheckFlagCommonConfig.cmake"
+  "/snap/cmake/1487/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Linker/GNU-C.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Linker/GNU-CXX.cmake"
   "/snap/cmake/1487/share/cmake-4.1/Modules/Linker/GNU.cmake"
@@ -57,9 +68,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dependencies/fmt/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/imgui.dir/DependInfo.cmake"
   "CMakeFiles/hello_window.dir/DependInfo.cmake"
+  "dependencies/fmt/CMakeFiles/fmt.dir/DependInfo.cmake"
   )

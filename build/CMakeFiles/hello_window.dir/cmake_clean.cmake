@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hello_window.dir/src/glad.c.o"
   "CMakeFiles/hello_window.dir/src/glad.c.o.d"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o.d"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o.d"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o"
+  "CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o.d"
   "CMakeFiles/hello_window.dir/src/main.cpp.o"
   "CMakeFiles/hello_window.dir/src/main.cpp.o.d"
   "hello_window"

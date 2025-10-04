@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named imgui
+
+# Build rule for target.
+imgui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui
+.PHONY : imgui
+
+# fast build rule for target.
+imgui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+.PHONY : imgui/fast
+
+#=============================================================================
 # Target rules for targets named hello_window
 
 # Build rule for target.
@@ -128,6 +141,115 @@ hello_window: cmake_check_build_system
 hello_window/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/build
 .PHONY : hello_window/fast
+
+#=============================================================================
+# Target rules for targets named fmt
+
+# Build rule for target.
+fmt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fmt
+.PHONY : fmt
+
+# fast build rule for target.
+fmt/fast:
+	$(MAKE) $(MAKESILENT) -f dependencies/fmt/CMakeFiles/fmt.dir/build.make dependencies/fmt/CMakeFiles/fmt.dir/build
+.PHONY : fmt/fast
+
+dependencies/imgui/imgui.o: dependencies/imgui/imgui.cpp.o
+.PHONY : dependencies/imgui/imgui.o
+
+# target to build an object file
+dependencies/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.o
+.PHONY : dependencies/imgui/imgui.cpp.o
+
+dependencies/imgui/imgui.i: dependencies/imgui/imgui.cpp.i
+.PHONY : dependencies/imgui/imgui.i
+
+# target to preprocess a source file
+dependencies/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.i
+.PHONY : dependencies/imgui/imgui.cpp.i
+
+dependencies/imgui/imgui.s: dependencies/imgui/imgui.cpp.s
+.PHONY : dependencies/imgui/imgui.s
+
+# target to generate assembly for a file
+dependencies/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.s
+.PHONY : dependencies/imgui/imgui.cpp.s
+
+dependencies/imgui/imgui_demo.o: dependencies/imgui/imgui_demo.cpp.o
+.PHONY : dependencies/imgui/imgui_demo.o
+
+# target to build an object file
+dependencies/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.o
+.PHONY : dependencies/imgui/imgui_demo.cpp.o
+
+dependencies/imgui/imgui_demo.i: dependencies/imgui/imgui_demo.cpp.i
+.PHONY : dependencies/imgui/imgui_demo.i
+
+# target to preprocess a source file
+dependencies/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.i
+.PHONY : dependencies/imgui/imgui_demo.cpp.i
+
+dependencies/imgui/imgui_demo.s: dependencies/imgui/imgui_demo.cpp.s
+.PHONY : dependencies/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+dependencies/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.s
+.PHONY : dependencies/imgui/imgui_demo.cpp.s
+
+dependencies/imgui/imgui_draw.o: dependencies/imgui/imgui_draw.cpp.o
+.PHONY : dependencies/imgui/imgui_draw.o
+
+# target to build an object file
+dependencies/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.o
+.PHONY : dependencies/imgui/imgui_draw.cpp.o
+
+dependencies/imgui/imgui_draw.i: dependencies/imgui/imgui_draw.cpp.i
+.PHONY : dependencies/imgui/imgui_draw.i
+
+# target to preprocess a source file
+dependencies/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.i
+.PHONY : dependencies/imgui/imgui_draw.cpp.i
+
+dependencies/imgui/imgui_draw.s: dependencies/imgui/imgui_draw.cpp.s
+.PHONY : dependencies/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+dependencies/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.s
+.PHONY : dependencies/imgui/imgui_draw.cpp.s
+
+dependencies/imgui/imgui_widgets.o: dependencies/imgui/imgui_widgets.cpp.o
+.PHONY : dependencies/imgui/imgui_widgets.o
+
+# target to build an object file
+dependencies/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.o
+.PHONY : dependencies/imgui/imgui_widgets.cpp.o
+
+dependencies/imgui/imgui_widgets.i: dependencies/imgui/imgui_widgets.cpp.i
+.PHONY : dependencies/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+dependencies/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.i
+.PHONY : dependencies/imgui/imgui_widgets.cpp.i
+
+dependencies/imgui/imgui_widgets.s: dependencies/imgui/imgui_widgets.cpp.s
+.PHONY : dependencies/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+dependencies/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.s
+.PHONY : dependencies/imgui/imgui_widgets.cpp.s
 
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
@@ -152,6 +274,78 @@ src/glad.s: src/glad.c.s
 src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/glad.c.s
 .PHONY : src/glad.c.s
+
+src/imgui_impl/fonts.o: src/imgui_impl/fonts.cpp.o
+.PHONY : src/imgui_impl/fonts.o
+
+# target to build an object file
+src/imgui_impl/fonts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o
+.PHONY : src/imgui_impl/fonts.cpp.o
+
+src/imgui_impl/fonts.i: src/imgui_impl/fonts.cpp.i
+.PHONY : src/imgui_impl/fonts.i
+
+# target to preprocess a source file
+src/imgui_impl/fonts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.i
+.PHONY : src/imgui_impl/fonts.cpp.i
+
+src/imgui_impl/fonts.s: src/imgui_impl/fonts.cpp.s
+.PHONY : src/imgui_impl/fonts.s
+
+# target to generate assembly for a file
+src/imgui_impl/fonts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.s
+.PHONY : src/imgui_impl/fonts.cpp.s
+
+src/imgui_impl/glfw.o: src/imgui_impl/glfw.cpp.o
+.PHONY : src/imgui_impl/glfw.o
+
+# target to build an object file
+src/imgui_impl/glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o
+.PHONY : src/imgui_impl/glfw.cpp.o
+
+src/imgui_impl/glfw.i: src/imgui_impl/glfw.cpp.i
+.PHONY : src/imgui_impl/glfw.i
+
+# target to preprocess a source file
+src/imgui_impl/glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.i
+.PHONY : src/imgui_impl/glfw.cpp.i
+
+src/imgui_impl/glfw.s: src/imgui_impl/glfw.cpp.s
+.PHONY : src/imgui_impl/glfw.s
+
+# target to generate assembly for a file
+src/imgui_impl/glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.s
+.PHONY : src/imgui_impl/glfw.cpp.s
+
+src/imgui_impl/opengl3.o: src/imgui_impl/opengl3.cpp.o
+.PHONY : src/imgui_impl/opengl3.o
+
+# target to build an object file
+src/imgui_impl/opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o
+.PHONY : src/imgui_impl/opengl3.cpp.o
+
+src/imgui_impl/opengl3.i: src/imgui_impl/opengl3.cpp.i
+.PHONY : src/imgui_impl/opengl3.i
+
+# target to preprocess a source file
+src/imgui_impl/opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.i
+.PHONY : src/imgui_impl/opengl3.cpp.i
+
+src/imgui_impl/opengl3.s: src/imgui_impl/opengl3.cpp.s
+.PHONY : src/imgui_impl/opengl3.s
+
+# target to generate assembly for a file
+src/imgui_impl/opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_window.dir/build.make CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.s
+.PHONY : src/imgui_impl/opengl3.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -185,10 +379,33 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... fmt"
 	@echo "... hello_window"
+	@echo "... imgui"
+	@echo "... dependencies/imgui/imgui.o"
+	@echo "... dependencies/imgui/imgui.i"
+	@echo "... dependencies/imgui/imgui.s"
+	@echo "... dependencies/imgui/imgui_demo.o"
+	@echo "... dependencies/imgui/imgui_demo.i"
+	@echo "... dependencies/imgui/imgui_demo.s"
+	@echo "... dependencies/imgui/imgui_draw.o"
+	@echo "... dependencies/imgui/imgui_draw.i"
+	@echo "... dependencies/imgui/imgui_draw.s"
+	@echo "... dependencies/imgui/imgui_widgets.o"
+	@echo "... dependencies/imgui/imgui_widgets.i"
+	@echo "... dependencies/imgui/imgui_widgets.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
+	@echo "... src/imgui_impl/fonts.o"
+	@echo "... src/imgui_impl/fonts.i"
+	@echo "... src/imgui_impl/fonts.s"
+	@echo "... src/imgui_impl/glfw.o"
+	@echo "... src/imgui_impl/glfw.i"
+	@echo "... src/imgui_impl/glfw.s"
+	@echo "... src/imgui_impl/opengl3.o"
+	@echo "... src/imgui_impl/opengl3.i"
+	@echo "... src/imgui_impl/opengl3.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
