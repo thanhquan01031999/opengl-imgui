@@ -1,55 +1,61 @@
 [
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -I/home/ltq/code/opengl/opengl-ltq/build/configuration -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.cpp",
   "output": "CMakeFiles/imgui.dir/dependencies/imgui/imgui.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_draw.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -I/home/ltq/code/opengl/opengl-ltq/build/configuration -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_draw.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_draw.cpp",
   "output": "CMakeFiles/imgui.dir/dependencies/imgui/imgui_draw.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_demo.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -I/home/ltq/code/opengl/opengl-ltq/build/configuration -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_demo.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_demo.cpp",
   "output": "CMakeFiles/imgui.dir/dependencies/imgui/imgui_demo.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_widgets.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/imgui -I/home/ltq/code/opengl/opengl-ltq/build/configuration -g -o CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.o -c /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_widgets.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui_widgets.cpp",
   "output": "CMakeFiles/imgui.dir/dependencies/imgui/imgui_widgets.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -g -o CMakeFiles/hello_window.dir/src/main.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/main.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -g -o CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/stb_image.cpp",
+  "file": "/home/ltq/code/opengl/opengl-ltq/src/stb_image.cpp",
+  "output": "CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o"
+},
+{
+  "directory": "/home/ltq/code/opengl/opengl-ltq/build",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq -g -o CMakeFiles/hello_window.dir/src/main.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/main.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/src/main.cpp",
   "output": "CMakeFiles/hello_window.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/gcc  -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -g -o CMakeFiles/hello_window.dir/src/glad.c.o -c /home/ltq/code/opengl/opengl-ltq/src/glad.c",
+  "command": "/usr/bin/gcc  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq -g -o CMakeFiles/hello_window.dir/src/glad.c.o -c /home/ltq/code/opengl/opengl-ltq/src/glad.c",
   "file": "/home/ltq/code/opengl/opengl-ltq/src/glad.c",
   "output": "CMakeFiles/hello_window.dir/src/glad.c.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -g -o CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq -g -o CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/opengl3.cpp",
   "output": "CMakeFiles/hello_window.dir/src/imgui_impl/opengl3.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -g -o CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq -g -o CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/glfw.cpp",
   "output": "CMakeFiles/hello_window.dir/src/imgui_impl/glfw.cpp.o"
 },
 {
   "directory": "/home/ltq/code/opengl/opengl-ltq/build",
-  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -g -o CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp",
+  "command": "/usr/bin/g++  -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq -g -o CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o -c /home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp",
   "file": "/home/ltq/code/opengl/opengl-ltq/src/imgui_impl/fonts.cpp",
   "output": "CMakeFiles/hello_window.dir/src/imgui_impl/fonts.cpp.o"
 },

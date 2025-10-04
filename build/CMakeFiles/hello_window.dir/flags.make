@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/g++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include
+C_INCLUDES = -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include
+CXX_INCLUDES = -I/home/ltq/code/opengl/opengl-ltq/build/configuration -I/home/ltq/code/opengl/opengl-ltq/include -I/home/ltq/code/opengl/opengl-ltq/dependencies -I/home/ltq/code/opengl/opengl-ltq/dependencies/fmt/include -I/home/ltq/code/opengl/opengl-ltq
 
 CXX_FLAGS = -g
 

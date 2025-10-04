@@ -18,8 +18,13 @@ set( IMGUI_SOURCES
 
 add_library( imgui STATIC ${IMGUI_SOURCES} )
 target_include_directories( imgui PRIVATE ${THIRDPARTY_DIR} ${IMGUI_SRC_DIR} )
+add_library(STB_IMAGE "src/stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
 
 add_subdirectory( ${THIRDPARTY_DIR}/fmt )
+add_subdirectory( ${THIRDPARTY_DIR}/glm )
+configure_file(configuration/root_directory.h.in configuration/root_directory.h)
+include_directories(${CMAKE_BINARY_DIR}/configuration)
 
 add_executable(hello_window
     src/main.cpp 
@@ -41,4 +46,6 @@ target_link_libraries(hello_window
     dl
     imgui
     fmt::fmt
+    glm
+    ${LIBS}
 )

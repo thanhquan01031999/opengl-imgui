@@ -18,6 +18,17 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /home/ltq/code/opengl/opengl-ltq/dependencies/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/stb_image.h \
+ /usr/include/stdio.h /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /home/ltq/code/opengl/opengl-ltq/dependencies/glm/glm.hpp \
  /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
@@ -241,45 +252,74 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/type_half.inl \
  /home/ltq/code/opengl/opengl-ltq/dependencies/glm/integer.hpp \
  /home/ltq/code/opengl/opengl-ltq/dependencies/glm/detail/func_integer.inl \
- /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
- /usr/include/c++/13/ios /usr/include/c++/13/iosfwd \
- /usr/include/c++/13/bits/stringfwd.h \
- /usr/include/c++/13/bits/memoryfwd.h /usr/include/c++/13/bits/postypes.h \
- /usr/include/c++/13/cwchar /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/13/exception /usr/include/c++/13/bits/exception.h \
- /usr/include/c++/13/bits/exception_ptr.h \
- /usr/include/c++/13/bits/cxxabi_init_exception.h \
- /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/hash_bytes.h \
- /usr/include/c++/13/new /usr/include/c++/13/bits/nested_exception.h \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/matrix_transform.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_projection.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/../gtc/constants.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/../gtc/constants.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_projection.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_clip_space.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_clip_space.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_transform.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../ext/matrix_transform.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/matrix_transform.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/type_ptr.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/quaternion.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_relational.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_relational.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/type_float.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/setup.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_common.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_common.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_float.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_float_precision.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_double.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_double_precision.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/quaternion.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/epsilon.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../detail/setup.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/epsilon.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/vec1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_bool1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_bool1_precision.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_float1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_float1_precision.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_double1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_double1_precision.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_int1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_int1_sized.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_uint1.hpp \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
+ /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/glm/gtc/type_ptr.inl \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/learnopengl/filesystem.h \
+ /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
+ /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
+ /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
+ /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/c++/13/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+ /usr/include/c++/13/bits/new_allocator.h /usr/include/c++/13/new \
+ /usr/include/c++/13/bits/exception.h \
  /usr/include/c++/13/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
  /usr/include/c++/13/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/cctype \
- /usr/include/ctype.h /usr/include/c++/13/bits/ios_base.h \
- /usr/include/c++/13/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
- /usr/include/c++/13/bits/locale_classes.h /usr/include/c++/13/string \
- /usr/include/c++/13/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
- /usr/include/c++/13/bits/new_allocator.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/iosfwd \
+ /usr/include/c++/13/cctype /usr/include/ctype.h \
  /usr/include/c++/13/bits/ostream_insert.h \
  /usr/include/c++/13/bits/cxxabi_forced.h \
  /usr/include/c++/13/bits/stl_function.h \
@@ -292,18 +332,12 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/alloc_traits.h \
  /usr/include/c++/13/bits/stl_construct.h /usr/include/c++/13/string_view \
  /usr/include/c++/13/bits/functional_hash.h \
+ /usr/include/c++/13/bits/hash_bytes.h \
  /usr/include/c++/13/bits/string_view.tcc \
  /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdlib \
- /usr/include/c++/13/cstdio /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/c++/13/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/13/cstdio /usr/include/c++/13/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
@@ -311,6 +345,27 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
+ /home/ltq/code/opengl/opengl-ltq/build/configuration/root_directory.h \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/learnopengl/shader.h \
+ /usr/include/c++/13/fstream /usr/include/c++/13/istream \
+ /usr/include/c++/13/ios /usr/include/c++/13/exception \
+ /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/c++/13/bits/cxxabi_init_exception.h \
+ /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
+ /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
+ /usr/include/c++/13/bits/locale_classes.h \
  /usr/include/c++/13/bits/locale_classes.tcc \
  /usr/include/c++/13/system_error \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
@@ -323,11 +378,21 @@ CMakeFiles/hello_window.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
  /usr/include/c++/13/bits/locale_facets.tcc \
- /usr/include/c++/13/bits/basic_ios.tcc \
- /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
+ /usr/include/c++/13/bits/ostream.tcc \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/iostream \
+ /home/ltq/code/opengl/opengl-ltq/dependencies/learnopengl/camera.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc \
  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imgui.h \
  /home/ltq/code/opengl/opengl-ltq/dependencies/imgui/imconfig.h \
- /usr/include/string.h /usr/include/strings.h \
  /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/glfw.h \
- /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h
+ /home/ltq/code/opengl/opengl-ltq/include/imgui_impl/opengl3.h \
+ /home/ltq/code/opengl/opengl-ltq/src/ltc_matrix.hpp \
+ /home/ltq/code/opengl/opengl-ltq/src/colors.hpp

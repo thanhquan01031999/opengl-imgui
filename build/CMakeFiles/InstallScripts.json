@@ -2,7 +2,8 @@
 	"InstallScripts" : 
 	[
 		"/home/ltq/code/opengl/opengl-ltq/build/cmake_install.cmake",
-		"/home/ltq/code/opengl/opengl-ltq/build/dependencies/fmt/cmake_install.cmake"
+		"/home/ltq/code/opengl/opengl-ltq/build/dependencies/fmt/cmake_install.cmake",
+		"/home/ltq/code/opengl/opengl-ltq/build/dependencies/glm/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

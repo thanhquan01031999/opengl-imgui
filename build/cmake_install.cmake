@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ltq/code/opengl/opengl-ltq/build/dependencies/fmt/cmake_install.cmake")
+  include("/home/ltq/code/opengl/opengl-ltq/build/dependencies/glm/cmake_install.cmake")
 
 endif()
 

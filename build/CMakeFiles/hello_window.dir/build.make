@@ -162,6 +162,7 @@ hello_window: CMakeFiles/hello_window.dir/build.make
 hello_window: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 hello_window: libimgui.a
 hello_window: dependencies/fmt/libfmtd.a
+hello_window: libSTB_IMAGE.a
 hello_window: /usr/lib/x86_64-linux-gnu/libGLX.so
 hello_window: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 hello_window: CMakeFiles/hello_window.dir/link.txt
