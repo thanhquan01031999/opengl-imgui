@@ -93,8 +93,24 @@ VertexAL areaLightVertices[6] = {
 	{{-8.0f, 0.4f, 1.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 1.0f}},
 	{{-8.0f, 0.4f, -1.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f}}};
 
+
+std::vector<float> createCircleVertices(float centerX, float centerY, float radius, int segments) {
+    std::vector<float> vertices;
+    vertices.push_back(centerX); // center x
+    vertices.push_back(centerY); // center y
+
+    for (int i = 0; i <= segments; ++i) {
+        float angle = 2.0f * M_PI * i / segments;
+        float x = centerX + radius * cos(angle);
+        float y = centerY + radius * sin(angle);
+        vertices.push_back(x);
+        vertices.push_back(y);
+    }
+    return vertices;
+}
 GLuint planeVBO, planeVAO;
 GLuint areaLightVBO, areaLightVAO;
+auto circleVertices = createCircleVertices(0.0f, 0.0f, 1.0f, 100);
 
 void configureMockupData()
 {
@@ -327,6 +343,15 @@ int main()
 	// 3D OBJECTS
 	configureMockupData();
 	areaLightTranslate = glm::vec3(0.0f, 0.0f, 0.0f);
+	auto circleVertices = createCircleVertices(0.0f, 0.0f, 1.0f, 100);
+	    GLuint VAO, VBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, circleVertices.size() * sizeof(float), circleVertices.data(), GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
 
 	// RENDER LOOP
 	while (!glfwWindowShouldClose(window))
@@ -343,6 +368,9 @@ int main()
 		ImGui::DragFloat("green", &l_green, 0.01f, 0.0f, 1.0f);
 		ImGui::DragFloat("blue", &l_blue, 0.01f, 0.0f, 1.0f);
 		ImGui::End();
+		LIGHT_COLOR.r = l_red;
+		LIGHT_COLOR.g = l_green;
+		LIGHT_COLOR.b = l_blue;
 
 		// ImGui Render
 		ImGui::Render();
@@ -370,6 +398,7 @@ int main()
 		shaderLTC.setMat4("projection", projection);
 		shaderLTC.setVec3("viewPosition", camera.Position);
 		shaderLTC.setVec3("areaLightTranslate", areaLightTranslate);
+		shaderLTC.setVec3("areaLight.color", LIGHT_COLOR);
 
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, mLTC.mat1);
@@ -383,10 +412,7 @@ int main()
 		shaderLightPlane.use();
 		model = glm::translate(model, areaLightTranslate);
 		shaderLightPlane.setMat4("model", model);
-		// LIGHT_COLOR.r = l_red;
-		// LIGHT_COLOR.g = l_green;
-		// LIGHT_COLOR.b = l_blue;
-		// shaderLightPlane.setVec3("lightColor", LIGHT_COLOR);
+		shaderLightPlane.setVec3("lightColor", LIGHT_COLOR);
 		shaderLightPlane.setMat4("view", view);
 		shaderLightPlane.setMat4("projection", projection);
 		renderAreaLight();
