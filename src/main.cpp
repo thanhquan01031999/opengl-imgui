@@ -32,229 +32,27 @@
 #include "ltc_matrix.hpp"
 #include "colors.hpp" // LOOK FOR DIFFERENT COLORS!
 
-// FUNCTION PROTOTYPES
-void framebuffer_size_callback(GLFWwindow *window, int width, int height);
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
-void mouse_callback(GLFWwindow *window, double xpos, double ypos);
-void scroll_callback(GLFWwindow *window, double xoffset, double yoffset);
-void do_movement(GLfloat deltaTime);
-unsigned int loadTexture(const char *path, bool gammaCorrection);
-void renderQuad();
-void renderCube();
-static float l_red = 0.0f;
-static float l_green = 0.0f;
-static float l_blue = 0.0f;
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void processInput(GLFWwindow *window);
 
-// SETTINGS AND GLOBALS
+// settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-glm::vec3 LIGHT_COLOR = Color::Cyan; // CHANGE AREA LIGHT COLOR HERE!
-bool keys[1024];						  // activated keys
-glm::vec3 areaLightTranslate;
-Shader *ltcShaderPtr;
 
-// camera
-Camera camera(glm::vec3(0.0f, 1.0f, 0.5f), glm::vec3(0.0f, 1.0f, 0.0f), 180.0f, 0.0f);
-float lastX = (float)SCR_WIDTH / 2.0;
-float lastY = (float)SCR_HEIGHT / 2.0;
-bool firstMouse = true;
+const char *vertexShaderSource ="#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos, 1.0);\n"
+    "}\0";
 
-// timing
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
-
-//
-// 2---3-5
-// |  / /|
-// | / / |
-// |/ /  |
-// 1-4---6
-//
-struct VertexAL
-{
-	glm::vec3 position;
-	glm::vec3 normal;
-	glm::vec2 texcoord;
-};
-
-const GLfloat psize = 10.0f;
-VertexAL planeVertices[6] = {
-	{{-psize, 0.0f, -psize}, {0.0f, 1.0f, 0.0f}, {0.0f, 0.0f}},
-	{{-psize, 0.0f, psize}, {0.0f, 1.0f, 0.0f}, {0.0f, 1.0f}},
-	{{psize, 0.0f, psize}, {0.0f, 1.0f, 0.0f}, {1.0f, 1.0f}},
-	{{-psize, 0.0f, -psize}, {0.0f, 1.0f, 0.0f}, {0.0f, 0.0f}},
-	{{psize, 0.0f, psize}, {0.0f, 1.0f, 0.0f}, {1.0f, 1.0f}},
-	{{psize, 0.0f, -psize}, {0.0f, 1.0f, 0.0f}, {1.0f, 0.0f}}};
-VertexAL areaLightVertices[6] = {
-	{{-8.0f, 2.4f, -1.0f}, {1.0f, 0.0f, 0.0f}, {0.0f, 0.0f}}, // 0 1 5 4
-	{{-8.0f, 2.4f, 1.0f}, {1.0f, 0.0f, 0.0f}, {0.0f, 1.0f}},
-	{{-8.0f, 0.4f, 1.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 1.0f}},
-	{{-8.0f, 2.4f, -1.0f}, {1.0f, 0.0f, 0.0f}, {0.0f, 0.0f}},
-	{{-8.0f, 0.4f, 1.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 1.0f}},
-	{{-8.0f, 0.4f, -1.0f}, {1.0f, 0.0f, 0.0f}, {1.0f, 0.0f}}};
-
-
-std::vector<float> createCircleVertices(float centerX, float centerY, float radius, int segments) {
-    std::vector<float> vertices;
-    vertices.push_back(centerX); // center x
-    vertices.push_back(centerY); // center y
-
-    for (int i = 0; i <= segments; ++i) {
-        float angle = 2.0f * M_PI * i / segments;
-        float x = centerX + radius * cos(angle);
-        float y = centerY + radius * sin(angle);
-        vertices.push_back(x);
-        vertices.push_back(y);
-    }
-    return vertices;
-}
-GLuint planeVBO, planeVAO;
-GLuint areaLightVBO, areaLightVAO;
-auto circleVertices = createCircleVertices(0.0f, 0.0f, 1.0f, 100);
-
-void configureMockupData()
-{
-	// PLANE
-	glGenVertexArrays(1, &planeVAO);
-	glGenBuffers(1, &planeVBO);
-
-	glBindVertexArray(planeVAO);
-	glBindBuffer(GL_ARRAY_BUFFER, planeVBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(planeVertices), planeVertices, GL_STATIC_DRAW);
-
-	// position
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)0);
-	glEnableVertexAttribArray(0);
-
-	// normal
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)(3 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(1);
-
-	// texcoord
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)(6 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(2);
-	glBindVertexArray(0);
-
-	// AREA LIGHT
-	glGenVertexArrays(1, &areaLightVAO);
-	glBindVertexArray(areaLightVAO);
-
-	glGenBuffers(1, &areaLightVBO);
-	glBindBuffer(GL_ARRAY_BUFFER, areaLightVBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(areaLightVertices), areaLightVertices, GL_STATIC_DRAW);
-
-	// position
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)0);
-	glEnableVertexAttribArray(0);
-
-	// normal
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)(3 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(1);
-
-	// texcoord
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat),
-						  (GLvoid *)(6 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(2);
-	glBindVertexArray(0);
-
-	glBindVertexArray(0);
-}
-
-void renderPlane()
-{
-	glBindVertexArray(planeVAO);
-	glDrawArrays(GL_TRIANGLES, 0, 6);
-	glBindVertexArray(0);
-}
-
-void renderAreaLight()
-{
-	glBindVertexArray(areaLightVAO);
-	glDrawArrays(GL_TRIANGLES, 0, 6);
-	glBindVertexArray(0);
-}
-
-struct LTC_matrices
-{
-	GLuint mat1;
-	GLuint mat2;
-};
-
-GLuint loadMTexture()
-{
-	GLuint texture = 0;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 64, 64,
-				 0, GL_RGBA, GL_FLOAT, LTC1);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	glBindTexture(GL_TEXTURE_2D, 0);
-	return texture;
-}
-
-GLuint loadLUTTexture()
-{
-	GLuint texture = 0;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 64, 64,
-				 0, GL_RGBA, GL_FLOAT, LTC2);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	glBindTexture(GL_TEXTURE_2D, 0);
-	return texture;
-}
-
-void incrementRoughness(float step)
-{
-	static glm::vec3 color = Color::SlateGray;
-	static float roughness = 0.5f;
-	roughness += step;
-	roughness = glm::clamp(roughness, 0.0f, 1.0f);
-	// std::cout << "roughness: " << roughness << '\n';
-	ltcShaderPtr->use();
-	ltcShaderPtr->setVec4("material.albedoRoughness", glm::vec4(color, roughness));
-	glUseProgram(0);
-}
-
-void incrementLightIntensity(float step)
-{
-	static float intensity = 4.0f;
-	intensity += step;
-	intensity = glm::clamp(intensity, 0.0f, 10.0f);
-	// std::cout << "intensity: " << intensity << '\n';
-	ltcShaderPtr->use();
-	ltcShaderPtr->setFloat("areaLight.intensity", intensity);
-	glUseProgram(0);
-}
-
-void switchTwoSided(bool doSwitch)
-{
-	static bool twoSided = true;
-	if (doSwitch)
-		twoSided = !twoSided;
-	// std::cout << "twoSided: " << std::boolalpha << twoSided << '\n';
-	ltcShaderPtr->use();
-	ltcShaderPtr->setFloat("areaLight.twoSided", twoSided);
-	glUseProgram(0);
-}
-
+const char *fragmentShaderSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"
+    "uniform vec4 ourColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = ourColor;\n"
+    "}\n\0";
 int main()
 {
 	// glfw: initialize and configure
@@ -301,59 +99,78 @@ int main()
 
 	// configure global opengl state
 	// -----------------------------
-	glEnable(GL_DEPTH_TEST);
+    // build and compile our shader program
+    // ------------------------------------
+    // vertex shader
+    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+    glCompileShader(vertexShader);
+    // check for shader compile errors
+    int success;
+    char infoLog[512];
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
+    // fragment shader
+    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+    glCompileShader(fragmentShader);
+    // check for shader compile errors
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
+    // link shaders
+    unsigned int shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    // check for linking errors
+    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    if (!success) {
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+    }
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
 
-	// LUT textures
-	LTC_matrices mLTC;
-	mLTC.mat1 = loadMTexture();
-	mLTC.mat2 = loadLUTTexture();
+    // set up vertex data (and buffer(s)) and configure vertex attributes
+    // ------------------------------------------------------------------
+    float vertices[] = {
+         0.5f, -0.5f, 0.0f,  // bottom right
+        -0.5f, -0.5f, 0.0f,  // bottom left
+         0.0f,  0.5f, 0.0f   // top
+    };
 
-	// SHADERS
-	Shader shaderLTC("7.area_light.vs", "7.area_light.fs");
-	ltcShaderPtr = &shaderLTC;
-	Shader shaderLightPlane("7.light_plane.vs", "7.light_plane.fs");
-
-	// TEXTURES
-	unsigned int concreteTexture = loadTexture(
-		FileSystem::getPath("resources/textures/concreteTexture.png").c_str(), true);
-
-	// SHADER CONFIGURATION
-	shaderLTC.use();
-	shaderLTC.setVec3("areaLight.points[0]", areaLightVertices[0].position);
-	shaderLTC.setVec3("areaLight.points[1]", areaLightVertices[1].position);
-	shaderLTC.setVec3("areaLight.points[2]", areaLightVertices[4].position);
-	shaderLTC.setVec3("areaLight.points[3]", areaLightVertices[5].position);
-	shaderLTC.setVec3("areaLight.color", LIGHT_COLOR);
-	shaderLTC.setInt("LTC1", 0);
-	shaderLTC.setInt("LTC2", 1);
-	shaderLTC.setInt("material.diffuse", 2);
-	incrementRoughness(0.0f);
-	incrementLightIntensity(0.0f);
-	switchTwoSided(false);
-	glUseProgram(0);
-
-	shaderLightPlane.use();
-	{
-		glm::mat4 model(1.0f);
-		shaderLightPlane.setMat4("model", model);
-	}
-	shaderLightPlane.setVec3("lightColor", LIGHT_COLOR);
-	glUseProgram(0);
-
-	// 3D OBJECTS
-	configureMockupData();
-	areaLightTranslate = glm::vec3(0.0f, 0.0f, 0.0f);
-	auto circleVertices = createCircleVertices(0.0f, 0.0f, 1.0f, 100);
-	    GLuint VAO, VBO;
+    unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
+    // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO);
+
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, circleVertices.size() * sizeof(float), circleVertices.data(), GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
+    // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
+    // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
+    // glBindVertexArray(0);
+
+
+    // bind the VAO (it was already bound, but just to demonstrate): seeing as we only have a single VAO we can
+    // just bind it beforehand before rendering the respective triangle; this is another approach.
+    glBindVertexArray(VAO);
 	// RENDER LOOP
+	static float redValue = 0.0f;
+	static float greenValue = 0.0f;
+	static float blueValue = 0.0f;
 	while (!glfwWindowShouldClose(window))
 	{
 		// Start IMGUI Frame
@@ -361,258 +178,59 @@ int main()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
+		        // input
+        // -----
+        processInput(window);
 		ImGui::Begin("Hello Quan");
 		ImGui::Text("Helloooo");
 		// ImGui::InputFloat("Color",&l_color,1.0f,1.0f,1,false);
-		ImGui::DragFloat("red", &l_red, 0.01f, 0.0f, 1.0f);
-		ImGui::DragFloat("green", &l_green, 0.01f, 0.0f, 1.0f);
-		ImGui::DragFloat("blue", &l_blue, 0.01f, 0.0f, 1.0f);
+		ImGui::DragFloat("red", &redValue, 0.01f, 0.0f, 1.0f);
+		ImGui::DragFloat("green", &greenValue, 0.01f, 0.0f, 1.0f);
+		ImGui::DragFloat("blue", &blueValue, 0.01f, 0.0f, 1.0f);
 		ImGui::End();
-		LIGHT_COLOR.r = l_red;
-		LIGHT_COLOR.g = l_green;
-		LIGHT_COLOR.b = l_blue;
-
-		// ImGui Render
 		ImGui::Render();
-		glClear(GL_COLOR_BUFFER_BIT);
-		float currentFrame = static_cast<float>(glfwGetTime());
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
 
-		glfwPollEvents();
-		do_movement(deltaTime);
+        // render
+        // ------
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glUseProgram(shaderProgram);
 
-		shaderLTC.use();
-		glm::mat4 model(1.0f);
-		glm::mat3 normalMatrix = glm::mat3(model);
-		shaderLTC.setMat4("model", model);
-		shaderLTC.setMat3("normalMatrix", normalMatrix);
-		glm::mat4 view = camera.GetViewMatrix();
-		shaderLTC.setMat4("view", view);
 
-		glm::mat4 projection = glm::perspective(
-			glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		shaderLTC.setMat4("projection", projection);
-		shaderLTC.setVec3("viewPosition", camera.Position);
-		shaderLTC.setVec3("areaLightTranslate", areaLightTranslate);
-		shaderLTC.setVec3("areaLight.color", LIGHT_COLOR);
+        // update shader uniform
+        // double  timeValue = glfwGetTime();
+        // float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5);
+        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+        glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
 
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, mLTC.mat1);
-		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, mLTC.mat2);
-		glActiveTexture(GL_TEXTURE2);
-		glBindTexture(GL_TEXTURE_2D, concreteTexture);
-		renderPlane();
-		glUseProgram(0);
-
-		shaderLightPlane.use();
-		model = glm::translate(model, areaLightTranslate);
-		shaderLightPlane.setMat4("model", model);
-		shaderLightPlane.setVec3("lightColor", LIGHT_COLOR);
-		shaderLightPlane.setMat4("view", view);
-		shaderLightPlane.setMat4("projection", projection);
-		renderAreaLight();
-		glUseProgram(0);
+        // render the triangle
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		glfwSwapBuffers(window);
+
+        // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+        // -------------------------------------------------------------------------------
+        glfwSwapBuffers(window);
+        glfwPollEvents();
 	}
-
-	glDeleteVertexArrays(1, &planeVAO);
-	glDeleteBuffers(1, &planeVBO);
-	glDeleteVertexArrays(1, &areaLightVAO);
-	glDeleteBuffers(1, &areaLightVBO);
-
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    glDeleteProgram(shaderProgram);
 	glfwTerminate();
 	return 0;
 }
-
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-void do_movement(GLfloat deltaTime)
+void processInput(GLFWwindow *window)
 {
-	float cameraSpeed = deltaTime * 3.0f;
-
-	if (keys[GLFW_KEY_W])
-	{
-		camera.ProcessKeyboard(FORWARD, cameraSpeed);
-	}
-	else if (keys[GLFW_KEY_S])
-	{
-		camera.ProcessKeyboard(BACKWARD, cameraSpeed);
-	}
-	if (keys[GLFW_KEY_A])
-	{
-		camera.ProcessKeyboard(LEFT, cameraSpeed);
-	}
-	else if (keys[GLFW_KEY_D])
-	{
-		camera.ProcessKeyboard(RIGHT, cameraSpeed);
-	}
-
-	if (keys[GLFW_KEY_R])
-	{
-		if (keys[GLFW_KEY_LEFT_SHIFT])
-			incrementRoughness(0.01f);
-		else
-			incrementRoughness(-0.01f);
-	}
-
-	if (keys[GLFW_KEY_I])
-	{
-		if (keys[GLFW_KEY_LEFT_SHIFT])
-			incrementLightIntensity(0.025f);
-		else
-			incrementLightIntensity(-0.025f);
-	}
-
-	if (keys[GLFW_KEY_LEFT])
-	{
-		areaLightTranslate.z += 0.01f;
-	}
-	if (keys[GLFW_KEY_RIGHT])
-	{
-		areaLightTranslate.z -= 0.01f;
-	}
-	if (keys[GLFW_KEY_UP])
-	{
-		areaLightTranslate.y += 0.01f;
-	}
-	if (keys[GLFW_KEY_DOWN])
-	{
-		areaLightTranslate.y -= 0.01f;
-	}
-}
-
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
-{
-	static unsigned short wireframe = 0;
-
-	if (action == GLFW_PRESS)
-	{
-		switch (key)
-		{
-		case GLFW_KEY_ESCAPE:
-			glfwSetWindowShouldClose(window, GL_TRUE);
-			return;
-		case GLFW_KEY_B:
-			switchTwoSided(true);
-			break;
-		default:
-			keys[key] = true;
-			break;
-		}
-	}
-
-	if (action == GLFW_RELEASE)
-	{
-		if (key == GLFW_KEY_SPACE)
-		{
-			switch (wireframe)
-			{
-			case 0:
-				glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-				wireframe = 1;
-				break;
-			default:
-				glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-				wireframe = 0;
-				break;
-			}
-		}
-		else
-		{
-			keys[key] = false;
-		}
-	}
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	// make sure the viewport matches the new window dimensions; note that width and
-	// height will be significantly larger than specified on retina displays.
-	glViewport(0, 0, width, height);
-}
-
-// glfw: whenever the mouse moves, this callback is called
-// -------------------------------------------------------
-void mouse_callback(GLFWwindow *window, double xposIn, double yposIn)
-{
-	float xpos = static_cast<float>(xposIn);
-	float ypos = static_cast<float>(yposIn);
-	if (firstMouse)
-	{
-		lastX = xpos;
-		lastY = ypos;
-		firstMouse = false;
-	}
-
-	float xoffset = xpos - lastX;
-	float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
-
-	lastX = xpos;
-	lastY = ypos;
-
-	camera.ProcessMouseMovement(xoffset, yoffset);
-}
-
-// glfw: whenever the mouse scroll wheel scrolls, this callback is called
-// ----------------------------------------------------------------------
-void scroll_callback(GLFWwindow *window, double xoffset, double yoffset)
-{
-	camera.ProcessMouseScroll(static_cast<float>(yoffset));
-}
-
-// utility function for loading a 2D texture from file
-// ---------------------------------------------------
-unsigned int loadTexture(char const *path, bool gammaCorrection)
-{
-	unsigned int textureID;
-	glGenTextures(1, &textureID);
-
-	int width, height, nrComponents;
-	unsigned char *data = stbi_load(path, &width, &height, &nrComponents, 0);
-	if (data)
-	{
-		GLenum internalFormat;
-		GLenum dataFormat;
-		if (nrComponents == 1)
-		{
-			internalFormat = dataFormat = GL_RED;
-		}
-		else if (nrComponents == 3)
-		{
-			internalFormat = gammaCorrection ? GL_SRGB : GL_RGB;
-			dataFormat = GL_RGB;
-		}
-		else if (nrComponents == 4)
-		{
-			internalFormat = gammaCorrection ? GL_SRGB_ALPHA : GL_RGBA;
-			dataFormat = GL_RGBA;
-		}
-
-		glBindTexture(GL_TEXTURE_2D, textureID);
-		glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, dataFormat, GL_UNSIGNED_BYTE, data);
-		glGenerateMipmap(GL_TEXTURE_2D);
-
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-		stbi_image_free(data);
-	}
-	else
-	{
-		std::cout << "Texture failed to load at path: " << path << std::endl;
-		stbi_image_free(data);
-	}
-
-	return textureID;
+    // make sure the viewport matches the new window dimensions; note that width and
+    // height will be significantly larger than specified on retina displays.
+    glViewport(0, 0, width, height);
 }
